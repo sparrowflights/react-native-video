@@ -405,7 +405,7 @@ static int const RCTVideoUnset = -1;
 
 - (NSURL*) urlFilePath:(NSString*) filepath {
   if ([filepath containsString:@"file://"]) {
-    return [NSURL fileURLWithPath:filepath];
+    return [NSURL fileURLWithPath: [filepath stringByReplacingOccurrencesOfString:@"file://" withString:@""]];
   }
   
   // if no file found, check if the file exists in the Document directory
