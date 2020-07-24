@@ -1328,9 +1328,6 @@ static int const RCTVideoUnset = -1;
     
     [self.layer addSublayer:_playerLayer];
     self.layer.needsDisplayOnBoundsChange = YES;
-    #if TARGET_OS_IOS
-    [self setupPipController];
-    #endif
   }
 }
 
